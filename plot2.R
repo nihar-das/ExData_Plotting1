@@ -12,7 +12,7 @@ data <- read_delim(dataset_name,  col_names = TRUE,
                weekday = weekdays(DateTimeString)) %>%
         select(-c(1:2))
 
-# generate histogram with proper label and title
+# generate line plot
 plot(data$DateTimeString, data$Global_active_power, type = "l", ylab = "Global Active Power(kilowatts)", xlab = "", xaxt = "n")
 
 # add custom x-axis label at start of day 1, day2 and day3

@@ -13,7 +13,7 @@ data <- read_delim(dataset_name,  col_names = TRUE,
          weekday = weekdays(DateTimeString)) %>%
   select(-c(1:2))
 
-# generate histogram with proper label and title
+# generate line plot
 plot(data$DateTimeString, data$Sub_metering_1, type = "l", col = "black", ylab = "Energy sub metering", xlab = "", xaxt = "n")
 lines(data$DateTimeString, data$Sub_metering_2, col = "red")
 lines(data$DateTimeString, data$Sub_metering_3, col = "blue")
