@@ -10,7 +10,7 @@ data <- read_delim(dataset_name,  col_names = TRUE,
         filter(Date == as.Date("2007-02-01") | Date == as.Date("2007-02-02"))
 
 #generate histogram with proper label and title
-hist(data$Global_active_power, xlab = "Global Active Power(kilowatts)", ylab = "Frequency", col = "red")
+hist(data$Global_active_power, xlab = "Global Active Power(kilowatts)", ylab = "Frequency", col = "red", main = "Global Active Power")
 
 #copy the histogram to a png device
 dev.copy(png, file = "plot1.png")

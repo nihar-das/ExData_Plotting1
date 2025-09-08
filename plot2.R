@@ -17,8 +17,8 @@ plot(data$DateTimeString, data$Global_active_power, type = "l", ylab = "Global A
 
 # add custom x-axis label at start of day 1, day2 and day3
 base_time = as.POSIXct(data$DateTimeString[1])
-axis(1, at = c(base_time, base_time + (3600 * 24), base_time + (3600 * 24 * 2)), labels = c("Thursday", "Friday", "Saturday"))
+axis(1, at = c(base_time, base_time + (3600 * 24), base_time + (3600 * 24 * 2)), labels = c("Thu", "Fri", "Sat"))
 
-#copy the histogram to a png device
+#copy the final plot to a png device
 dev.copy(png, file = "plot2.png")
 dev.off()
